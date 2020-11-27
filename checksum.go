@@ -25,5 +25,5 @@ func (mcs *Murmur3CheckSum) SumString(str string) string {
 }
 
 func (mcs *Murmur3CheckSum) SumBytes(b []byte) string {
-	return hex.EncodeToString(mmh3.Hash128(b))
+	return hex.EncodeToString(mmh3.Hash128x64(b))
 }
